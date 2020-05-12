@@ -5,3 +5,5 @@ A set of demo pages for HoneyMint promo competition. It has the following functi
 * The Email will consist of a special link which is sharable to facebook or twitter.
 * If someone registers through that link then the person who's unique link it is will get one extra entry in the competition.
 * The leaderboard can be seen through the leaderboard page which will display the rank, name, email and entries of all the participant in ascending order.
+
+NOTE : You will have to put your own Email Server configuration in settings.py in the Django project.
