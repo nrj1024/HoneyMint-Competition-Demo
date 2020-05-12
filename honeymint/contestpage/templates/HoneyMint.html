@@ -1,0 +1,89 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Honey Mint</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95f27fe8e3.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        padding-left: 250px;
+        width: 50%;
+        background-color: white;
+    }
+
+    li {
+        float: left;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    li a {
+        display: block;
+        color: #111111;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        text-decoration: underline;
+    }
+
+    .bt{       
+        color: white;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 600;
+        background-color: rgb(255, 208, 0);
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ic>i{
+        padding: 5px;
+    }
+</style>
+
+<body style="margin: 0; padding: 0; background-color: white;">
+
+    <div style=" position: absolute; top: 35%; width: 300px; left: 15%; font-family: 'PT Sans', sans-serif; font-weight: 600; font-size: 32px;">
+        <p>What's Honey Mint?<br>Well, it's a <span style="color: rgb(233, 40, 66);">tasteful</span>,<br><span style="color: rgb(149, 201, 28);">energizing</span> and<br><span style="color: rgb(59, 113, 230);">refreshing</span> drink.</p>
+    </div>
+    <div style="text-align: justify; position: absolute; bottom: -75%; width: 575px; left: 50px; font-family: 'PT Sans', sans-serif; font-weight: 600; font-size: 32px;">
+        <p>It's a non-carbonic, non-alcoholic drink for every occassion and for people of all age group.</p>
+        <p style="font-size: 16px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima modi itaque deleniti ab officia dolor dicta beatae, nisi perspiciatis laborum deserunt nostrum ducimus ratione hic, molestiae qui. Consequuntur, qui totam?
+            <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima modi itaque deleniti ab officia dolor dicta beatae, nisi perspiciatis laborum deserunt nostrum ducimus ratione hic, molestiae qui. Consequuntur, qui totam?<br><br><br><br><br><br><br><br><br>
+        </p>
+    </div>
+    
+    <div style="position: fixed;">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="register" class="bt" style="position: relative; left: 15px; top: 10px; text-decoration: none;">★ Promo Contest ★</a></li>
+        </ul>
+        <img style="position: fixed; height: 50px; padding-left: 10px;" src="{% static 'HoneyMint.png' %}">
+        <img id="cover" style="position: fixed; right: 0px; height: 100%;" src="{% static 'honeymint.jpg' %}">
+
+        <div class="ic" style="position: fixed; bottom: 10px; left: 600px; float: left; background-color: white;">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </div>
+
+    
+    
+    
+</body>
+
+</html>

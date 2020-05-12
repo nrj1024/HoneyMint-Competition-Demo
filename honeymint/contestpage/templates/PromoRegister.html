@@ -1,0 +1,53 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Promo Contest</title>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+       input{
+           background-color: rgb(218, 218, 218);
+           outline: none;
+           border-radius: 25px;
+           color: black;
+           padding: 10px;
+           border: none;
+           margin: 10px;
+           width: 500px;
+
+       }
+
+       button{
+           background-color: rgba(238, 183, 32, 0.918);
+           border-radius: 25px;
+           color: white;
+           padding: 10px;
+           border: none;
+           margin: 10px;
+           width: 100px;
+       }
+    </style>
+    <body style="padding: 0; margin: 0; font-family: 'PT Sans', sans-serif;">
+        <div style="background-image: url({% static 'Rules.png' %}); background-repeat: no-repeat; background-size: cover; position: fixed; right: 0px; height: 100%; width: 50%;">
+        </div>
+        <div style="font-weight: 600; font-size: 32px; padding: 20px;">Sign up and get a chance to win :)</div>
+        <div style="margin: 20px; margin-top: 8%; width: 500px;"> 
+            <form action="register" method="POST">
+                {% csrf_token %}
+                <input type="text" name="first_name" placeholder="First Name" required><br>
+                <input type="text" name="last_name" placeholder="Last Name" required><br>
+                <input type="text" name="phone" pattern="[0-9]{10}" placeholder="Phone Number" required><br>
+                <input type="email" name="email" placeholder="E-mail" required><br>
+                <button style="cursor:pointer; "type="submit">Sign Up</button><a href="checkin" style="margin-left: 165px;">Already Registered? Login here</a>
+            </form>
+            {% if success %}
+            <div style="width: 500px; height: 40px; padding: 10px; border-radius: 5px; background-color: rgb(0, 212, 0); color: white;">You have been successfuly registered in the competition! Please check your mail for your special invitation link :)</div>
+            {% endif %}
+            {% if same %}
+            <div style="width: 500px; height: 20px; padding: 10px; border-radius: 5px; background-color: rgb(255, 0, 43); color: white;">Email or Phone is already in the database!</div>
+            {% endif %}
+        </div>
+    </body>
+</html>
